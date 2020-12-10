@@ -51,6 +51,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row w3-padding-64">
     <div class="w3-twothird w3-container">
       <h1 class="w3-text-teal">Apuntes</h1>
+
+      <div id="openseadragon1" style="height: 600px;" class="w-auto p-3"></div>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
         dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
@@ -98,6 +100,20 @@ function w3_close() {
   overlayBg.style.display = "none";
 }
 </script>
-
+<script src="openseadragon/openseadragon.js"></script>
+<script type="text/javascript">
+  var viewer = OpenSeadragon({
+    id: "openseadragon1",
+    //showNavigator:  true,
+    sequenceMode: true,
+    // Set the icons theme
+    prefixUrl: "openseadragon/images/",
+    tileSources: [
+      {
+        type: 'image',
+        url: "img/Whiteboard.png"
+      },]
+  });
+</script>
 </body>
 </html>
